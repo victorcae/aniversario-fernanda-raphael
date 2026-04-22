@@ -65,13 +65,13 @@ export function Hero() {
           initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.85 }}
           className="absolute select-none"
-          style={{ left: "13%", top: "42%", width: "10%" }}
+          style={{ left: "16%", top: "42%", width: "10%" }}
         />
         <motion.img src="/images/icons/candle-bow.png" alt=""
           initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.95 }}
           className="absolute select-none"
-          style={{ left: "23%", top: "47%", width: "10%" }}
+          style={{ left: "26%", top: "47%", width: "10%" }}
         />
 
         {/* Candelabra + right candle */}
@@ -79,13 +79,13 @@ export function Hero() {
           initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.9 }}
           className="absolute select-none"
-          style={{ left: "63%", top: "47%", width: "9%" }}
+          style={{ left: "65%", top: "47%", width: "9%" }}
         />
         <motion.img src="/images/icons/candle-bow.png" alt=""
           initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.0 }}
           className="absolute select-none"
-          style={{ left: "74%", top: "42%", width: "9%" }}
+          style={{ left: "76%", top: "42%", width: "9%" }}
         />
 
         {/* Apple + Orange */}
