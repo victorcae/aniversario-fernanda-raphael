@@ -30,7 +30,7 @@ export function Hero() {
           animate={{ opacity: 1, x: 0, rotate: -18 }}
           transition={{ duration: 1.2, delay: 0.4 }}
           className="absolute font-script text-ink-600 leading-[0.95] origin-top-left"
-          style={{ left: "21%", top: "18%", fontSize: "clamp(1.9rem, 8.5vw, 3.2rem)" }}
+          style={{ left: "21%", top: "18%", fontSize: "clamp(2.2rem, 10vw, 3.8rem)" }}
         >
           Save our<br />
           <span className="inline-block pl-3">Date!</span>
@@ -49,7 +49,7 @@ export function Hero() {
           initial={{ opacity: 0 }} animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.8 }}
           className="absolute select-none"
-          style={{ left: "8%", top: "22%", width: "7%" }}
+          style={{ left: "13%", top: "28%", width: "7%" }}
         />
 
         {/* Cake */}
