@@ -14,8 +14,9 @@ export function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
         className="md:hidden relative w-full"
+        style={{ height: "min(80vh, 680px)", minHeight: "520px" }}
       >
-        {/* Frame — stretches to match content height */}
+        {/* Frame fills the fixed-height card */}
         <img
           src="/images/icons/frame.png"
           alt="" aria-hidden="true"
@@ -23,147 +24,127 @@ export function Hero() {
           style={{ objectFit: "fill" }}
         />
 
-        {/* Disco-taxi — absolute top-right */}
-        <motion.img
-          src="/images/icons/disco-taxi.png" alt=""
-          initial={{ opacity: 0 }} animate={{ opacity: 1 }}
+        {/* Save our Date! */}
+        <motion.h1
+          initial={{ opacity: 0, x: -8, rotate: -18 }}
+          animate={{ opacity: 1, x: 0, rotate: -18 }}
+          transition={{ duration: 1.2, delay: 0.4 }}
+          className="absolute font-script text-ink-600 leading-[0.95] origin-top-left"
+          style={{ left: "12%", top: "9%", fontSize: "clamp(1.6rem, 7vw, 2.8rem)" }}
+        >
+          Save our<br />
+          <span className="inline-block pl-3">Date!</span>
+        </motion.h1>
+
+        {/* Disco-taxi */}
+        <motion.img src="/images/icons/disco-taxi.png" alt=""
+          initial={{ opacity: 0, y: -6 }} animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.6 }}
           className="absolute select-none"
-          style={{ right: "11%", top: "3%", width: "20%" }}
+          style={{ right: "10%", top: "4%", width: "19%" }}
         />
 
-        {/* Sparkler — absolute left */}
-        <motion.img
-          src="/images/icons/sparkler.png" alt=""
+        {/* Sparkler */}
+        <motion.img src="/images/icons/sparkler.png" alt=""
           initial={{ opacity: 0 }} animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.8 }}
           className="absolute select-none"
-          style={{ left: "7%", top: "20%", width: "8%" }}
+          style={{ left: "8%", top: "22%", width: "7%" }}
         />
 
-        {/* Content column — padded to stay inside frame borders */}
-        <div className="relative z-10 flex flex-col items-center px-[12%] pt-[8%] pb-[12%]">
+        {/* Cake */}
+        <motion.img src="/images/icons/cake.png" alt=""
+          initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.4, delay: 0.7 }}
+          className="absolute select-none"
+          style={{ left: "28%", top: "7%", width: "44%" }}
+        />
 
-          {/* Save our Date! */}
-          <motion.div
-            initial={{ opacity: 0, rotate: -18 }}
-            animate={{ opacity: 1, rotate: -18 }}
-            transition={{ duration: 1.2, delay: 0.4 }}
-            className="self-start ml-[2%] mb-4 origin-top-left"
-            style={{ transformOrigin: "top left" }}
-          >
-            <h1
-              className="font-script text-ink-600 leading-[0.95]"
-              style={{ fontSize: "clamp(1.9rem, 9vw, 3rem)" }}
-            >
-              Save our<br />
-              <span className="inline-block pl-3">Date!</span>
-            </h1>
-          </motion.div>
+        {/* Left candles */}
+        <motion.img src="/images/icons/candle-bow.png" alt=""
+          initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.85 }}
+          className="absolute select-none"
+          style={{ left: "7%", top: "40%", width: "10%" }}
+        />
+        <motion.img src="/images/icons/candle-bow.png" alt=""
+          initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.95 }}
+          className="absolute select-none"
+          style={{ left: "19%", top: "45%", width: "10%" }}
+        />
 
-          {/* Cake */}
-          <motion.img
-            src="/images/icons/cake.png" alt=""
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1.4, delay: 0.7 }}
-            className="w-[58%] h-auto"
-          />
+        {/* Candelabra + right candle */}
+        <motion.img src="/images/icons/candelabra.png" alt=""
+          initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.9 }}
+          className="absolute select-none"
+          style={{ left: "63%", top: "45%", width: "9%" }}
+        />
+        <motion.img src="/images/icons/candle-bow.png" alt=""
+          initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.0 }}
+          className="absolute select-none"
+          style={{ left: "74%", top: "40%", width: "9%" }}
+        />
 
-          {/* Candles row — symmetric, below cake */}
-          <div className="flex items-end justify-between w-full mt-1 mb-2 px-[2%]">
-            {/* Left group */}
-            <div className="flex items-end gap-[3%]">
-              <motion.img src="/images/icons/candle-bow.png" alt=""
-                initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.85 }}
-                className="w-[30px] h-auto"
-              />
-              <motion.img src="/images/icons/candle-bow.png" alt=""
-                initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.95 }}
-                className="w-[34px] h-auto"
-              />
-            </div>
-            {/* Apple + orange in center */}
-            <div className="flex items-end gap-3">
-              <motion.img src="/images/icons/apple.png" alt=""
-                initial={{ opacity: 0 }} animate={{ opacity: 1 }}
-                transition={{ duration: 0.8, delay: 1.1 }}
-                className="w-[16px] h-auto"
-              />
-              <motion.img src="/images/icons/orange.png" alt=""
-                initial={{ opacity: 0 }} animate={{ opacity: 1 }}
-                transition={{ duration: 0.8, delay: 1.15 }}
-                className="w-[16px] h-auto"
-              />
-            </div>
-            {/* Right group */}
-            <div className="flex items-end gap-[3%]">
-              <motion.img src="/images/icons/candelabra.png" alt=""
-                initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.9 }}
-                className="w-[28px] h-auto"
-              />
-              <motion.img src="/images/icons/candle-bow.png" alt=""
-                initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 1.0 }}
-                className="w-[30px] h-auto"
-              />
-            </div>
-          </div>
+        {/* Apple + Orange */}
+        <motion.img src="/images/icons/apple.png" alt=""
+          initial={{ opacity: 0 }} animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 1.1 }}
+          className="absolute select-none"
+          style={{ left: "39%", top: "56%", width: "5%" }}
+        />
+        <motion.img src="/images/icons/orange.png" alt=""
+          initial={{ opacity: 0 }} animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 1.15 }}
+          className="absolute select-none"
+          style={{ left: "54%", top: "56%", width: "5%" }}
+        />
 
-          {/* Divider */}
-          <div className="w-10 h-px bg-ink-600/40 my-3" />
+        {/* Fê & Ph */}
+        <motion.div
+          initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2, delay: 1.2 }}
+          className="absolute text-center left-0 right-0"
+          style={{ top: "62%" }}
+        >
+          <h2 className="font-script text-ink-600 leading-none"
+              style={{ fontSize: "clamp(2.6rem, 11vw, 4.5rem)" }}>
+            Fê <span className="font-display font-semibold not-italic mx-1" style={{ fontSize: "0.55em" }}>&</span> Ph
+          </h2>
+        </motion.div>
 
-          {/* Fê & Ph */}
-          <motion.h2
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.2, delay: 1.2 }}
-            className="font-script text-ink-600 leading-none text-center mb-3"
-            style={{ fontSize: "clamp(3rem, 14vw, 5rem)" }}
-          >
-            Fê{" "}
-            <span className="font-display font-semibold not-italic" style={{ fontSize: "0.55em" }}>&</span>
-            {" "}Ph
-          </motion.h2>
+        {/* Invite text */}
+        <motion.p
+          initial={{ opacity: 0 }} animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 1.3 }}
+          className="absolute text-center left-0 right-0 font-typewriter tracking-[0.1em] text-ink-700 uppercase leading-relaxed px-[12%]"
+          style={{ top: "72%", fontSize: "clamp(9px, 2.5vw, 12px)" }}
+        >
+          convidam você para a celebração<br />dos seus 10 anos de casados
+        </motion.p>
 
-          {/* Invite text */}
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 1.3 }}
-            className="font-typewriter tracking-[0.1em] text-ink-700 uppercase text-center leading-relaxed mb-3"
-            style={{ fontSize: "clamp(9px, 2.8vw, 12px)" }}
-          >
-            convidam você para a celebração<br />
-            dos seus 10 anos de casados
-          </motion.p>
+        {/* Date */}
+        <motion.p
+          initial={{ opacity: 0 }} animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 1.5 }}
+          className="absolute text-center left-0 right-0 font-display font-bold text-ink-700 tracking-[0.1em]"
+          style={{ top: "80%", fontSize: "clamp(1.1rem, 5vw, 2rem)" }}
+        >
+          29 . 08 . 2026
+        </motion.p>
 
-          {/* Date */}
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 1.5 }}
-            className="font-display font-bold text-ink-700 tracking-[0.1em] text-center mb-3"
-            style={{ fontSize: "clamp(1.3rem, 6vw, 2.2rem)" }}
-          >
-            29 . 08 . 2026
-          </motion.p>
+        {/* Formal */}
+        <motion.p
+          initial={{ opacity: 0 }} animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 1.7 }}
+          className="absolute text-center left-0 right-0 font-script text-ink-600"
+          style={{ top: "87%", fontSize: "clamp(0.9rem, 4vw, 1.5rem)" }}
+        >
+          formal invitation to follow
+        </motion.p>
 
-          {/* Formal */}
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 1.7 }}
-            className="font-script text-ink-600 text-center"
-            style={{ fontSize: "clamp(1.1rem, 5vw, 1.8rem)" }}
-          >
-            formal invitation to follow
-          </motion.p>
-
-        </div>
       </motion.div>
 
 
