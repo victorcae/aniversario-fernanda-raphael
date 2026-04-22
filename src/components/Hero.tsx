@@ -83,7 +83,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.85 }}
-          className="hidden md:absolute select-none"
+          className="absolute hidden md:block select-none"
           style={{ left: "14%", top: "39%", width: "12%" }}
         />
         <motion.img
@@ -92,7 +92,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.95 }}
-          className="hidden md:absolute select-none"
+          className="absolute hidden md:block select-none"
           style={{ left: "24%", top: "44%", width: "12%" }}
         />
 
@@ -114,7 +114,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.9 }}
-          className="hidden md:absolute select-none"
+          className="absolute hidden md:block select-none"
           style={{ left: "65%", top: "44%", width: "10%" }}
         />
         {/* Right: candle with bow */}
@@ -124,7 +124,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1.0 }}
-          className="hidden md:absolute select-none"
+          className="absolute hidden md:block select-none"
           style={{ left: "77%", top: "39%", width: "10%" }}
         />
 
@@ -135,7 +135,7 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.1 }}
-          className="hidden md:absolute select-none"
+          className="absolute hidden md:block select-none"
           style={{ left: "38%", top: "58%", width: "4.5%" }}
         />
         <motion.img
@@ -144,7 +144,7 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.15 }}
-          className="hidden md:absolute select-none"
+          className="absolute hidden md:block select-none"
           style={{ left: "55%", top: "58%", width: "4.5%" }}
         />
 
