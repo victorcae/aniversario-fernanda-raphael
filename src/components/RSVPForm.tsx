@@ -158,14 +158,14 @@ export function RSVPForm() {
                 </p>
                 <div className="grid grid-cols-3 gap-3">
                   {DUCKS.map(({ v, src, label }) => (
-                    <label key={v} className="cursor-pointer group">
+                    <label key={v} className="cursor-pointer group flex">
                       <input
                         type="radio"
                         value={v}
                         {...register("presenca")}
                         className="sr-only peer"
                       />
-                      <div className="flex flex-col items-center gap-3 border border-ink-600/20 py-5 px-2 transition-all duration-300 peer-checked:border-ink-600 peer-checked:bg-paper-100 group-hover:border-ink-600/50">
+                      <div className="flex flex-col items-center justify-between gap-3 border border-ink-600/20 py-5 px-2 h-full transition-all duration-300 peer-checked:border-ink-600 peer-checked:bg-paper-100 group-hover:border-ink-600/50">
                         <img src={src} alt="" className="h-32 md:h-36 w-auto" />
                         <span className="font-script text-ink-600 text-2xl md:text-3xl leading-none">
                           {label}

@@ -17,8 +17,7 @@ export function Hero() {
         initial={{ opacity: 0, y: 24 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
-        className="relative w-full max-w-[1080px]"
-        style={{ aspectRatio: "680 / 720" }}
+        className="relative w-full max-w-[1080px] aspect-[3/4] md:aspect-[680/720]"
       >
         {/* Frame — fills container exactly, no distortion */}
         <img
@@ -154,12 +153,11 @@ export function Hero() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 1.2 }}
-          className="absolute text-center left-0 right-0"
-          style={{ top: "65%" }}
+          className="absolute text-center left-0 right-0 top-[56%] md:top-[65%]"
         >
           <h2
             className="font-script text-ink-600 leading-none"
-            style={{ fontSize: "clamp(3.8rem, 12vw, 7rem)" }}
+            style={{ fontSize: "clamp(2.4rem, 8vw, 7rem)" }}
           >
             Fê <span className="font-display font-semibold not-italic mx-1" style={{ fontSize: "0.55em" }}>&</span> Ph
           </h2>
@@ -170,8 +168,8 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.2, delay: 1.4 }}
-          className="absolute text-center left-0 right-0 font-typewriter tracking-[0.14em] text-ink-700 uppercase leading-relaxed px-[14%]"
-          style={{ top: "74%", fontSize: "clamp(12px, 2.2vw, 17px)" }}
+          className="absolute text-center left-0 right-0 top-[68%] md:top-[74%] font-typewriter tracking-[0.14em] text-ink-700 uppercase leading-relaxed px-[14%]"
+          style={{ fontSize: "clamp(10px, 2vw, 17px)" }}
         >
           convidam você para a celebração
           <br />
@@ -183,8 +181,8 @@ export function Hero() {
           initial={{ opacity: 0, y: 6 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 1.6 }}
-          className="absolute text-center left-0 right-0 font-display font-bold text-ink-700 tracking-[0.14em]"
-          style={{ top: "80%", fontSize: "clamp(1.3rem, 4vw, 2.1rem)" }}
+          className="absolute text-center left-0 right-0 top-[77%] md:top-[80%] font-display font-bold text-ink-700 tracking-[0.14em]"
+          style={{ fontSize: "clamp(1.1rem, 3.5vw, 2.1rem)" }}
         >
           29 . 08 . 2026
         </motion.p>
@@ -194,8 +192,8 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.2, delay: 1.8 }}
-          className="absolute text-center left-0 right-0 font-script text-ink-600"
-          style={{ top: "86%", fontSize: "clamp(1.2rem, 3.2vw, 1.8rem)" }}
+          className="absolute text-center left-0 right-0 top-[84%] md:top-[86%] font-script text-ink-600"
+          style={{ fontSize: "clamp(1rem, 2.8vw, 1.8rem)" }}
         >
           formal invitation to follow
         </motion.p>
