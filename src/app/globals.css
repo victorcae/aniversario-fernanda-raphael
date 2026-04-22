@@ -44,7 +44,7 @@ body {
 
 /* Button */
 .btn-ink {
-  @apply relative px-10 py-3 font-typewriter tracking-[0.2em] text-sm uppercase transition-all duration-300 bg-ink-600 text-paper-50 hover:bg-ink-700;
+  @apply relative px-10 py-4 font-typewriter tracking-[0.2em] text-base uppercase transition-all duration-300 bg-ink-600 text-paper-50 hover:bg-ink-700;
 }
 
 /* Smooth Lenis scroll */

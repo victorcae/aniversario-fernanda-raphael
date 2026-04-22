@@ -10,14 +10,14 @@ import { motion } from "framer-motion";
 */
 export function Hero() {
   return (
-    <section className="relative min-h-screen bg-paper-50 flex flex-col items-center justify-start py-10 md:py-14 px-4">
+    <section className="relative min-h-screen bg-paper-50 flex flex-col items-center justify-start pt-0 pb-10 md:pb-14 px-4">
 
       {/* Portrait invitation card */}
       <motion.div
         initial={{ opacity: 0, y: 24 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
-        className="relative w-[92%] max-w-[960px]"
+        className="relative w-full max-w-[1080px]"
         style={{ aspectRatio: "680 / 720" }}
       >
         {/* Frame — fills container exactly, no distortion */}
@@ -30,15 +30,14 @@ export function Hero() {
 
         {/* Save our Date! — top-left, tilted, inside inner frame */}
         <motion.h1
-          initial={{ opacity: 0, x: -12 }}
-          animate={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: -12, rotate: -18 }}
+          animate={{ opacity: 1, x: 0, rotate: -18 }}
           transition={{ duration: 1.2, delay: 0.4 }}
           className="absolute font-script text-ink-600 leading-[0.95] origin-top-left"
           style={{
-            left: "15%",
-            top: "9%",
-            transform: "rotate(-8deg)",
-            fontSize: "clamp(2rem, 5vw, 3rem)",
+            left: "16%",
+            top: "17%",
+            fontSize: "clamp(3.2rem, 8vw, 5rem)",
           }}
         >
           Save our<br />
@@ -53,7 +52,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.6 }}
           className="absolute select-none"
-          style={{ right: "15%", top: "3%", width: "17%" }}
+          style={{ right: "15%", top: "9%", width: "17%" }}
         />
 
         {/* Sparkler — left side */}
@@ -75,7 +74,7 @@ export function Hero() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.9 }}
           className="absolute select-none"
-          style={{ left: "30%", top: "21%", width: "6%" }}
+          style={{ left: "55%", top: "11%", width: "6%" }}
         />
 
         {/* Left candle-with-bow pair */}
@@ -86,7 +85,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.85 }}
           className="absolute select-none"
-          style={{ left: "14%", top: "33%", width: "12%" }}
+          style={{ left: "14%", top: "39%", width: "12%" }}
         />
         <motion.img
           src="/images/icons/candle-bow.png"
@@ -95,7 +94,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.95 }}
           className="absolute select-none"
-          style={{ left: "26%", top: "35%", width: "12%" }}
+          style={{ left: "24%", top: "44%", width: "12%" }}
         />
 
         {/* Cake — center */}
@@ -106,7 +105,7 @@ export function Hero() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.4, delay: 0.7 }}
           className="absolute select-none"
-          style={{ left: "35%", top: "13%", width: "31%" }}
+          style={{ left: "36%", top: "16%", width: "27%" }}
         />
 
         {/* Right: candelabra */}
@@ -117,7 +116,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.9 }}
           className="absolute select-none"
-          style={{ left: "65%", top: "33%", width: "10%" }}
+          style={{ left: "65%", top: "44%", width: "10%" }}
         />
         {/* Right: candle with bow */}
         <motion.img
@@ -127,7 +126,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1.0 }}
           className="absolute select-none"
-          style={{ left: "74%", top: "35%", width: "10%" }}
+          style={{ left: "77%", top: "39%", width: "10%" }}
         />
 
         {/* Apple + Orange — scattered below cake */}
@@ -138,7 +137,7 @@ export function Hero() {
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.1 }}
           className="absolute select-none"
-          style={{ left: "31%", top: "57%", width: "6%" }}
+          style={{ left: "38%", top: "58%", width: "4.5%" }}
         />
         <motion.img
           src="/images/icons/orange.png"
@@ -147,7 +146,7 @@ export function Hero() {
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.15 }}
           className="absolute select-none"
-          style={{ left: "62%", top: "58%", width: "6%" }}
+          style={{ left: "55%", top: "58%", width: "4.5%" }}
         />
 
         {/* Fê & Ph */}
@@ -156,11 +155,11 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 1.2 }}
           className="absolute text-center left-0 right-0"
-          style={{ top: "64%" }}
+          style={{ top: "65%" }}
         >
           <h2
             className="font-script text-ink-600 leading-none"
-            style={{ fontSize: "clamp(3rem, 10vw, 5.5rem)" }}
+            style={{ fontSize: "clamp(3.8rem, 12vw, 7rem)" }}
           >
             Fê <span className="font-display font-semibold not-italic mx-1" style={{ fontSize: "0.55em" }}>&</span> Ph
           </h2>
@@ -172,7 +171,7 @@ export function Hero() {
           animate={{ opacity: 1 }}
           transition={{ duration: 1.2, delay: 1.4 }}
           className="absolute text-center left-0 right-0 font-typewriter tracking-[0.14em] text-ink-700 uppercase leading-relaxed px-[14%]"
-          style={{ top: "73%", fontSize: "clamp(10px, 1.8vw, 14px)" }}
+          style={{ top: "74%", fontSize: "clamp(12px, 2.2vw, 17px)" }}
         >
           convidam você para a celebração
           <br />

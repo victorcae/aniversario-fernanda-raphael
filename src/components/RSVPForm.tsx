@@ -63,7 +63,7 @@ export function RSVPForm() {
       id="rsvp"
       className="relative py-28 md:py-36 px-6 bg-paper-50 border-t border-ink-600/10"
     >
-      <div className="max-w-lg mx-auto">
+      <div className="max-w-2xl mx-auto">
 
         {/* Heading */}
         <motion.div
@@ -123,7 +123,7 @@ export function RSVPForm() {
             >
               {/* Nome */}
               <div>
-                <label className="block font-typewriter tracking-[0.22em] text-[13px] text-ink-600 uppercase mb-2">
+                <label className="block font-typewriter tracking-[0.22em] text-base text-ink-600 uppercase mb-2">
                   seu nome
                 </label>
                 <input
@@ -138,7 +138,7 @@ export function RSVPForm() {
 
               {/* Celular */}
               <div>
-                <label className="block font-typewriter tracking-[0.22em] text-[13px] text-ink-600 uppercase mb-2">
+                <label className="block font-typewriter tracking-[0.22em] text-base text-ink-600 uppercase mb-2">
                   celular
                 </label>
                 <input
@@ -153,7 +153,7 @@ export function RSVPForm() {
 
               {/* Presence — duck icons */}
               <div>
-                <p className="font-typewriter tracking-[0.22em] text-[13px] text-ink-600 uppercase mb-6 text-center">
+                <p className="font-typewriter tracking-[0.22em] text-base text-ink-600 uppercase mb-6 text-center">
                   você poderá comparecer?
                 </p>
                 <div className="grid grid-cols-3 gap-3">
@@ -167,7 +167,7 @@ export function RSVPForm() {
                       />
                       <div className="flex flex-col items-center gap-3 border border-ink-600/20 py-5 px-2 transition-all duration-300 peer-checked:border-ink-600 peer-checked:bg-paper-100 group-hover:border-ink-600/50">
                         <img src={src} alt="" className="h-32 md:h-36 w-auto" />
-                        <span className="font-script text-ink-600 text-xl md:text-2xl leading-none">
+                        <span className="font-script text-ink-600 text-2xl md:text-3xl leading-none">
                           {label}
                         </span>
                       </div>
@@ -188,7 +188,7 @@ export function RSVPForm() {
                   transition={{ duration: 0.45 }}
                   className="overflow-hidden"
                 >
-                  <label className="block font-typewriter tracking-[0.22em] text-[13px] text-ink-600 uppercase mb-2">
+                  <label className="block font-typewriter tracking-[0.22em] text-base text-ink-600 uppercase mb-2">
                     quantidade de acompanhantes
                   </label>
                   <select

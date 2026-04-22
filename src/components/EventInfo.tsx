@@ -4,8 +4,8 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 const items = [
-  { label: "Quando", value: "29 de agosto", sub: "sábado · 2026" },
-  { label: "Onde", value: "New York", sub: "local em breve" }
+  { label: "Quando", value: "29 de agosto" },
+  { label: "Onde", value: "New York" }
 ];
 
 export function EventInfo() {
@@ -49,7 +49,7 @@ export function EventInfo() {
 
         {/* Info cards */}
         <div className="grid grid-cols-2 gap-4 md:gap-6 max-w-md mx-auto">
-          {items.map(({ label, value, sub }, i) => (
+          {items.map(({ label, value }, i) => (
             <motion.div
               key={label}
               initial={{ opacity: 0, y: 24 }}
@@ -62,9 +62,6 @@ export function EventInfo() {
               </p>
               <p className="font-display font-semibold text-xl md:text-2xl text-ink-700 leading-tight">
                 {value}
-              </p>
-              <p className="mt-2 font-serif italic text-base text-ink-600/70">
-                {sub}
               </p>
             </motion.div>
           ))}
