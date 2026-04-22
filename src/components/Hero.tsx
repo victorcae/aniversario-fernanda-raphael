@@ -30,7 +30,7 @@ export function Hero() {
           animate={{ opacity: 1, x: 0, rotate: -18 }}
           transition={{ duration: 1.2, delay: 0.4 }}
           className="absolute font-script text-ink-600 leading-[0.95] origin-top-left"
-          style={{ left: "12%", top: "9%", fontSize: "clamp(1.6rem, 7vw, 2.8rem)" }}
+          style={{ left: "17%", top: "14%", fontSize: "clamp(1.6rem, 7vw, 2.8rem)" }}
         >
           Save our<br />
           <span className="inline-block pl-3">Date!</span>
@@ -41,7 +41,7 @@ export function Hero() {
           initial={{ opacity: 0, y: -6 }} animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.6 }}
           className="absolute select-none"
-          style={{ right: "10%", top: "4%", width: "19%" }}
+          style={{ right: "14%", top: "8%", width: "19%" }}
         />
 
         {/* Sparkler */}
@@ -57,7 +57,7 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.4, delay: 0.7 }}
           className="absolute select-none"
-          style={{ left: "28%", top: "7%", width: "44%" }}
+          style={{ left: "32%", top: "10%", width: "36%" }}
         />
 
         {/* Left candles */}
@@ -65,13 +65,13 @@ export function Hero() {
           initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.85 }}
           className="absolute select-none"
-          style={{ left: "7%", top: "40%", width: "10%" }}
+          style={{ left: "7%", top: "42%", width: "10%" }}
         />
         <motion.img src="/images/icons/candle-bow.png" alt=""
           initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.95 }}
           className="absolute select-none"
-          style={{ left: "19%", top: "45%", width: "10%" }}
+          style={{ left: "18%", top: "47%", width: "10%" }}
         />
 
         {/* Candelabra + right candle */}
@@ -79,13 +79,13 @@ export function Hero() {
           initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.9 }}
           className="absolute select-none"
-          style={{ left: "63%", top: "45%", width: "9%" }}
+          style={{ left: "62%", top: "47%", width: "9%" }}
         />
         <motion.img src="/images/icons/candle-bow.png" alt=""
           initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.0 }}
           className="absolute select-none"
-          style={{ left: "74%", top: "40%", width: "9%" }}
+          style={{ left: "73%", top: "42%", width: "9%" }}
         />
 
         {/* Apple + Orange */}
@@ -93,13 +93,13 @@ export function Hero() {
           initial={{ opacity: 0 }} animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 1.1 }}
           className="absolute select-none"
-          style={{ left: "39%", top: "56%", width: "5%" }}
+          style={{ left: "37%", top: "55%", width: "4.5%" }}
         />
         <motion.img src="/images/icons/orange.png" alt=""
           initial={{ opacity: 0 }} animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 1.15 }}
           className="absolute select-none"
-          style={{ left: "54%", top: "56%", width: "5%" }}
+          style={{ left: "56%", top: "55%", width: "4.5%" }}
         />
 
         {/* Fê & Ph */}
