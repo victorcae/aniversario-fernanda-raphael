@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Countdown } from "./Countdown";
 
 /*
   Hero layout — mirrors the "2.png" reference composition.
@@ -202,19 +201,6 @@ export function Hero() {
           formal invitation to follow
         </motion.p>
 
-      </motion.div>
-
-      {/* Countdown below the card */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.2, delay: 2.2 }}
-        className="mt-20"
-      >
-        <p className="text-center font-typewriter tracking-[0.24em] text-[13px] text-ink-600 uppercase mb-6">
-          faltam
-        </p>
-        <Countdown />
       </motion.div>
 
       {/* Scroll cue */}

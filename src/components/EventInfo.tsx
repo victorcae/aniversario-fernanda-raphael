@@ -5,9 +5,7 @@ import { useRef } from "react";
 
 const items = [
   { label: "Quando", value: "29 de agosto", sub: "sábado · 2026" },
-  { label: "Onde", value: "New York", sub: "local em breve" },
-  { label: "Horário", value: "Em breve", sub: "aguarde novidades" },
-  { label: "Dress code", value: "Em breve", sub: "detalhes a caminho" }
+  { label: "Onde", value: "New York", sub: "local em breve" }
 ];
 
 export function EventInfo() {
@@ -32,9 +30,6 @@ export function EventInfo() {
           <p className="font-typewriter tracking-[0.28em] text-[13px] md:text-[15px] text-ink-600 uppercase">
             detalhes do encontro
           </p>
-          <h2 className="mt-5 font-script text-6xl md:text-8xl text-ink-600">
-            O grande dia
-          </h2>
           <div className="mt-4 w-16 h-px bg-ink-600/40 mx-auto" />
         </motion.div>
 
@@ -53,7 +48,7 @@ export function EventInfo() {
         </motion.div>
 
         {/* Info cards */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+        <div className="grid grid-cols-2 gap-4 md:gap-6 max-w-md mx-auto">
           {items.map(({ label, value, sub }, i) => (
             <motion.div
               key={label}

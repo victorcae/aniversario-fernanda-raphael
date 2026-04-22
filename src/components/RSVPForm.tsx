@@ -11,7 +11,7 @@ const DUCKS = [
   { v: "sim",    label: "confirmado!",    src: "/images/icons/duck-confirmado.png" },
   { v: "talvez", label: "em análise...",  src: "/images/icons/duck-analise.png" },
   { v: "nao",    label: "não vai dar =(", src: "/images/icons/duck-nao.png" },
-];
+] as const;
 
 export function RSVPForm() {
   const ref = useRef<HTMLDivElement>(null);
@@ -29,18 +29,13 @@ export function RSVPForm() {
     resolver: zodResolver(rsvpSchema),
     defaultValues: {
       nome: "",
-      email: "",
       telefone: "",
       presenca: undefined,
       acompanhantes: 0,
-      nomesAcompanhantes: "",
-      restricoes: "",
-      mensagem: "",
     },
   });
 
   const presenca = watch("presenca");
-  const acompanhantes = watch("acompanhantes");
 
   async function onSubmit(data: RsvpInput) {
     try {
@@ -97,7 +92,6 @@ export function RSVPForm() {
               transition={{ duration: 0.9 }}
               className="text-center py-16 px-8 border border-ink-600/25 bg-paper-100"
             >
-              {/* Confirmado duck */}
               <div className="flex justify-center mb-6">
                 <img src={DUCKS[0].src} alt="" className="h-40 w-auto" />
               </div>
@@ -130,7 +124,7 @@ export function RSVPForm() {
               {/* Nome */}
               <div>
                 <label className="block font-typewriter tracking-[0.22em] text-[13px] text-ink-600 uppercase mb-2">
-                  seu nome completo
+                  seu nome
                 </label>
                 <input
                   {...register("nome")}
@@ -142,35 +136,19 @@ export function RSVPForm() {
                 )}
               </div>
 
-              {/* Email + WhatsApp */}
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block font-typewriter tracking-[0.22em] text-[13px] text-ink-600 uppercase mb-2">
-                    email
-                  </label>
-                  <input
-                    type="email"
-                    {...register("email")}
-                    className="input-ink"
-                    placeholder="seu@email.com"
-                  />
-                  {errors.email && (
-                    <p className="mt-2 text-sm text-red-600/80 italic">{errors.email.message}</p>
-                  )}
-                </div>
-                <div>
-                  <label className="block font-typewriter tracking-[0.22em] text-[13px] text-ink-600 uppercase mb-2">
-                    whatsapp
-                  </label>
-                  <input
-                    {...register("telefone")}
-                    className="input-ink"
-                    placeholder="(11) 90000-0000"
-                  />
-                  {errors.telefone && (
-                    <p className="mt-2 text-sm text-red-600/80 italic">{errors.telefone.message}</p>
-                  )}
-                </div>
+              {/* Celular */}
+              <div>
+                <label className="block font-typewriter tracking-[0.22em] text-[13px] text-ink-600 uppercase mb-2">
+                  celular
+                </label>
+                <input
+                  {...register("telefone")}
+                  className="input-ink"
+                  placeholder="(11) 90000-0000"
+                />
+                {errors.telefone && (
+                  <p className="mt-2 text-sm text-red-600/80 italic">{errors.telefone.message}</p>
+                )}
               </div>
 
               {/* Presence — duck icons */}
@@ -208,72 +186,23 @@ export function RSVPForm() {
                   animate={{ opacity: 1, height: "auto" }}
                   exit={{ opacity: 0, height: 0 }}
                   transition={{ duration: 0.45 }}
-                  className="space-y-6 overflow-hidden"
+                  className="overflow-hidden"
                 >
-                  <div>
-                    <label className="block font-typewriter tracking-[0.22em] text-[13px] text-ink-600 uppercase mb-2">
-                      número de acompanhantes
-                    </label>
-                    <select
-                      {...register("acompanhantes")}
-                      className="input-ink appearance-none cursor-pointer"
-                    >
-                      {[0, 1, 2, 3, 4, 5].map((n) => (
-                        <option key={n} value={n}>
-                          {n === 0 ? "nenhum" : `${n} ${n === 1 ? "acompanhante" : "acompanhantes"}`}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-
-                  {Number(acompanhantes) > 0 && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 8 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.4 }}
-                    >
-                      <label className="block font-typewriter tracking-[0.22em] text-[13px] text-ink-600 uppercase mb-2">
-                        nome dos acompanhantes
-                      </label>
-                      <input
-                        {...register("nomesAcompanhantes")}
-                        className="input-ink"
-                        placeholder="separe por vírgula"
-                      />
-                    </motion.div>
-                  )}
-
-                  <div>
-                    <label className="block font-typewriter tracking-[0.22em] text-[13px] text-ink-600 uppercase mb-2">
-                      restrições alimentares
-                      <span className="ml-1 normal-case tracking-normal font-serif italic text-ink-600/60">
-                        (opcional)
-                      </span>
-                    </label>
-                    <input
-                      {...register("restricoes")}
-                      className="input-ink"
-                      placeholder="alergias, intolerâncias, dietas especiais"
-                    />
-                  </div>
+                  <label className="block font-typewriter tracking-[0.22em] text-[13px] text-ink-600 uppercase mb-2">
+                    quantidade de acompanhantes
+                  </label>
+                  <select
+                    {...register("acompanhantes")}
+                    className="input-ink appearance-none cursor-pointer"
+                  >
+                    {[0, 1, 2, 3, 4, 5].map((n) => (
+                      <option key={n} value={n}>
+                        {n === 0 ? "nenhum" : `${n} ${n === 1 ? "acompanhante" : "acompanhantes"}`}
+                      </option>
+                    ))}
+                  </select>
                 </motion.div>
               )}
-
-              {/* Message */}
-              <div>
-                <label className="block font-typewriter tracking-[0.22em] text-[13px] text-ink-600 uppercase mb-2">
-                  mensagem para o casal
-                  <span className="ml-1 normal-case tracking-normal font-serif italic text-ink-600/60">
-                    (opcional)
-                  </span>
-                </label>
-                <textarea
-                  {...register("mensagem")}
-                  rows={4}
-                  className="textarea-ink"
-                  placeholder="um recado, um desejo, uma lembrança..."
-                />
-              </div>
 
               <motion.button
                 whileHover={{ scale: 1.01 }}
