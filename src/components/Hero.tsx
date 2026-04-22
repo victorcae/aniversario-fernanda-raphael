@@ -57,7 +57,7 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.4, delay: 0.7 }}
           className="absolute select-none"
-          style={{ left: "34%", top: "22%", width: "28%" }}
+          style={{ left: "34%", top: "31%", width: "28%" }}
         />
 
         {/* Left candles */}
