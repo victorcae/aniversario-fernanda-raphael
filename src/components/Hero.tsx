@@ -49,7 +49,7 @@ export function Hero() {
           initial={{ opacity: 0 }} animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.8 }}
           className="absolute select-none"
-          style={{ left: "13%", top: "28%", width: "7%" }}
+          style={{ left: "19%", top: "31%", width: "7%" }}
         />
 
         {/* Cake */}
