@@ -57,7 +57,7 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.4, delay: 0.7 }}
           className="absolute select-none"
-          style={{ left: "32%", top: "10%", width: "36%" }}
+          style={{ left: "34%", top: "16%", width: "28%" }}
         />
 
         {/* Left candles */}
@@ -65,13 +65,13 @@ export function Hero() {
           initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.85 }}
           className="absolute select-none"
-          style={{ left: "7%", top: "42%", width: "10%" }}
+          style={{ left: "7%", top: "40%", width: "10%" }}
         />
         <motion.img src="/images/icons/candle-bow.png" alt=""
           initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.95 }}
           className="absolute select-none"
-          style={{ left: "18%", top: "47%", width: "10%" }}
+          style={{ left: "18%", top: "45%", width: "10%" }}
         />
 
         {/* Candelabra + right candle */}
@@ -79,13 +79,13 @@ export function Hero() {
           initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.9 }}
           className="absolute select-none"
-          style={{ left: "62%", top: "47%", width: "9%" }}
+          style={{ left: "62%", top: "45%", width: "9%" }}
         />
         <motion.img src="/images/icons/candle-bow.png" alt=""
           initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.0 }}
           className="absolute select-none"
-          style={{ left: "73%", top: "42%", width: "9%" }}
+          style={{ left: "73%", top: "40%", width: "9%" }}
         />
 
         {/* Apple + Orange */}
@@ -93,13 +93,13 @@ export function Hero() {
           initial={{ opacity: 0 }} animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 1.1 }}
           className="absolute select-none"
-          style={{ left: "37%", top: "55%", width: "4.5%" }}
+          style={{ left: "37%", top: "56%", width: "4.5%" }}
         />
         <motion.img src="/images/icons/orange.png" alt=""
           initial={{ opacity: 0 }} animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 1.15 }}
           className="absolute select-none"
-          style={{ left: "56%", top: "55%", width: "4.5%" }}
+          style={{ left: "56%", top: "56%", width: "4.5%" }}
         />
 
         {/* Fê & Ph */}
