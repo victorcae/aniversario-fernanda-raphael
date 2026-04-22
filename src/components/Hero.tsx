@@ -30,7 +30,7 @@ export function Hero() {
           animate={{ opacity: 1, x: 0, rotate: -18 }}
           transition={{ duration: 1.2, delay: 0.4 }}
           className="absolute font-script text-ink-600 leading-[0.95] origin-top-left"
-          style={{ left: "17%", top: "14%", fontSize: "clamp(1.6rem, 7vw, 2.8rem)" }}
+          style={{ left: "21%", top: "18%", fontSize: "clamp(1.9rem, 8.5vw, 3.2rem)" }}
         >
           Save our<br />
           <span className="inline-block pl-3">Date!</span>
