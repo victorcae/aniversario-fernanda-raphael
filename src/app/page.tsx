@@ -8,7 +8,7 @@ import { SmoothScroll } from "@/components/SmoothScroll";
 export default function Home() {
   return (
     <SmoothScroll>
-      <main className="relative">
+      <main className="bg-paper-50 text-ink-700">
         <Hero />
         <Invitation />
         <EventInfo />

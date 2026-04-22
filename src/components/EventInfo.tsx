@@ -2,34 +2,12 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { CalendarHeart, MapPin, Clock, Sparkles } from "lucide-react";
-import { WatercolorBlob } from "./illustrations/WatercolorFrame";
 
 const items = [
-  {
-    icon: CalendarHeart,
-    label: "Quando",
-    value: "29 de agosto",
-    sub: "sábado · 2026"
-  },
-  {
-    icon: MapPin,
-    label: "Onde",
-    value: "New York",
-    sub: "local em breve"
-  },
-  {
-    icon: Clock,
-    label: "Horário",
-    value: "Em breve",
-    sub: "aguarde novidades"
-  },
-  {
-    icon: Sparkles,
-    label: "Dress code",
-    value: "Em breve",
-    sub: "detalhes a caminho"
-  }
+  { label: "Quando", value: "29 de agosto", sub: "sábado · 2026" },
+  { label: "Onde", value: "New York", sub: "local em breve" },
+  { label: "Horário", value: "Em breve", sub: "aguarde novidades" },
+  { label: "Dress code", value: "Em breve", sub: "detalhes a caminho" }
 ];
 
 export function EventInfo() {
@@ -40,57 +18,59 @@ export function EventInfo() {
     <section
       ref={ref}
       id="informacoes"
-      className="relative py-28 md:py-40 px-6 bg-watercolor-sky paper-texture overflow-hidden"
+      className="relative py-28 md:py-36 px-6 bg-paper-100 border-t border-ink-600/10"
     >
-      <WatercolorBlob className="absolute top-10 right-10 w-96 h-96" color="#E8DCC8" />
-      <WatercolorBlob className="absolute bottom-10 left-10 w-96 h-96" color="#B8C8D8" />
+      <div className="relative z-10 max-w-4xl mx-auto">
 
-      <div className="relative z-10 max-w-6xl mx-auto">
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1 }}
-          className="text-center mb-16 md:mb-24"
+          className="text-center mb-16"
         >
-          <p className="font-smallcaps tracking-[0.4em] text-xs text-olive-700 mb-4">
+          <p className="font-typewriter tracking-[0.28em] text-[13px] md:text-[15px] text-ink-600 uppercase">
             detalhes do encontro
           </p>
-          <h2 className="font-serif text-4xl md:text-6xl font-light text-olive-800 tracking-wide">
+          <h2 className="mt-5 font-script text-6xl md:text-8xl text-ink-600">
             O grande dia
           </h2>
-          <div className="mt-6 w-16 h-px bg-olive-600/50 mx-auto" />
+          <div className="mt-4 w-16 h-px bg-ink-600/40 mx-auto" />
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {items.map(({ icon: Icon, label, value, sub }, i) => (
+        {/* NY skyline */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 1.2, delay: 0.3 }}
+          className="mb-16"
+        >
+          <img
+            src="/images/icons/skyline-ducks.png"
+            alt="Skyline de New York"
+            className="w-full max-w-2xl block mx-auto h-auto"
+          />
+        </motion.div>
+
+        {/* Info cards */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+          {items.map(({ label, value, sub }, i) => (
             <motion.div
               key={label}
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 24 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.9, delay: 0.2 + i * 0.15 }}
-              whileHover={{ y: -6 }}
-              className="group relative"
+              transition={{ duration: 0.9, delay: 0.5 + i * 0.1 }}
+              className="text-center border border-ink-600/20 p-6 md:p-8 bg-paper-50"
             >
-              <div className="relative bg-cream-50/70 backdrop-blur-sm border border-olive-600/15 p-8 text-center transition-all duration-500 group-hover:border-olive-600/40 group-hover:bg-cream-50/90 h-full">
-                <div className="flex justify-center mb-5">
-                  <div className="relative">
-                    <div className="absolute inset-0 bg-olive-400/20 rounded-full blur-xl scale-150 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    <Icon
-                      className="relative w-8 h-8 text-olive-700"
-                      strokeWidth={1.2}
-                    />
-                  </div>
-                </div>
-                <p className="font-smallcaps tracking-[0.3em] text-[11px] text-olive-700 mb-3">
-                  {label}
-                </p>
-                <p className="font-serif text-2xl md:text-3xl font-light text-olive-800 leading-tight">
-                  {value}
-                </p>
-                <p className="mt-2 font-body italic text-sm text-olive-700/70">
-                  {sub}
-                </p>
-              </div>
+              <p className="font-typewriter tracking-[0.22em] text-[12px] md:text-[13px] text-ink-600 uppercase mb-3">
+                {label}
+              </p>
+              <p className="font-display font-semibold text-xl md:text-2xl text-ink-700 leading-tight">
+                {value}
+              </p>
+              <p className="mt-2 font-serif italic text-base text-ink-600/70">
+                {sub}
+              </p>
             </motion.div>
           ))}
         </div>
@@ -99,11 +79,12 @@ export function EventInfo() {
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ duration: 1, delay: 1 }}
-          className="mt-16 text-center font-body italic text-olive-700/80 max-w-xl mx-auto"
+          className="mt-14 text-center font-serif italic text-lg text-ink-700/80 max-w-lg mx-auto"
         >
           Mais informações serão compartilhadas em breve. Confirme sua
           presença abaixo para que possamos preparar tudo com carinho.
         </motion.p>
+
       </div>
     </section>
   );

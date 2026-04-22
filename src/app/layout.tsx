@@ -1,8 +1,14 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Cormorant_SC, Pinyon_Script, Lora } from "next/font/google";
+import { Allura, Cormorant_Garamond, Bodoni_Moda, Special_Elite } from "next/font/google";
 import { Toaster } from "sonner";
-import { WatercolorFilters } from "@/components/illustrations/WatercolorFilters";
 import "./globals.css";
+
+const allura = Allura({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-allura",
+  display: "swap"
+});
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -11,24 +17,17 @@ const cormorant = Cormorant_Garamond({
   display: "swap"
 });
 
-const cormorantSC = Cormorant_SC({
+const bodoni = Bodoni_Moda({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-cormorant-sc",
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-bodoni",
   display: "swap"
 });
 
-const pinyon = Pinyon_Script({
+const specialElite = Special_Elite({
   subsets: ["latin"],
   weight: "400",
-  variable: "--font-pinyon",
-  display: "swap"
-});
-
-const lora = Lora({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-lora",
+  variable: "--font-elite",
   display: "swap"
 });
 
@@ -49,19 +48,18 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${cormorant.variable} ${cormorantSC.variable} ${pinyon.variable} ${lora.variable}`}
+      className={`${allura.variable} ${cormorant.variable} ${bodoni.variable} ${specialElite.variable}`}
     >
       <body>
-        <WatercolorFilters />
         {children}
         <Toaster
           position="top-center"
           toastOptions={{
             style: {
-              background: "#FBF9F4",
-              border: "1px solid #5A6B3E",
-              color: "#3A4A2E",
-              fontFamily: "var(--font-lora), serif"
+              background: "#FBF7EE",
+              border: "1px solid #2E3A8A",
+              color: "#2E3A8A",
+              fontFamily: "var(--font-cormorant), serif"
             }
           }}
         />

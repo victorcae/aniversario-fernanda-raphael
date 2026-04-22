@@ -5,49 +5,36 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        olive: {
-          50: "#F4F6EE",
-          100: "#E6EBD8",
-          200: "#CFD8B4",
-          300: "#B4C18A",
-          400: "#8A9A5F",
-          500: "#6B7B45",
-          600: "#5A6B3E",
-          700: "#4A5832",
-          800: "#3A4A2E",
-          900: "#2B3622"
+        ink: {
+          50: "#EEF1FB",
+          100: "#D5DCF3",
+          200: "#A8B4E2",
+          300: "#7B8BD1",
+          400: "#4E63C0",
+          500: "#3A4FB2",
+          600: "#2E3A8A",
+          700: "#253072",
+          800: "#1C255A",
+          900: "#131A42"
         },
-        sky: {
-          watercolor: "#D8E4EC",
-          soft: "#B8C8D8",
-          deep: "#94ADC2"
-        },
-        cream: {
-          50: "#FBF9F4",
-          100: "#F5EFE4",
-          200: "#E8DCC8",
-          300: "#D9C7A8",
-          400: "#C2A97E"
+        paper: {
+          50: "#FDFBF5",
+          100: "#FBF7EE",
+          200: "#F5EFDE",
+          300: "#EEE5C8",
+          400: "#E3D5A8"
         }
       },
       fontFamily: {
+        script: ["var(--font-allura)", "cursive"],
         serif: ["var(--font-cormorant)", "serif"],
-        smallcaps: ["var(--font-cormorant-sc)", "serif"],
-        script: ["var(--font-pinyon)", "cursive"],
-        body: ["var(--font-lora)", "serif"]
-      },
-      backgroundImage: {
-        "watercolor-sky":
-          "radial-gradient(ellipse at top, #EEF4F7 0%, #D8E4EC 40%, #B8C8D8 100%)",
-        "watercolor-soft":
-          "radial-gradient(ellipse at center, #FBF9F4 0%, #E8E8DC 60%, #D8E4EC 100%)"
+        display: ["var(--font-bodoni)", "serif"],
+        typewriter: ["var(--font-elite)", "monospace"]
       },
       animation: {
-        "fade-in": "fadeIn 1.5s ease-out forwards",
-        "fade-in-up": "fadeInUp 1.2s ease-out forwards",
-        "float": "float 6s ease-in-out infinite",
-        "ink-spread": "inkSpread 2s ease-out forwards",
-        "shimmer": "shimmer 8s ease-in-out infinite"
+        "fade-in": "fadeIn 1.6s ease-out forwards",
+        "fade-in-up": "fadeInUp 1.4s ease-out forwards",
+        "float": "float 7s ease-in-out infinite"
       },
       keyframes: {
         fadeIn: {
@@ -55,20 +42,12 @@ const config: Config = {
           "100%": { opacity: "1" }
         },
         fadeInUp: {
-          "0%": { opacity: "0", transform: "translateY(30px)" },
+          "0%": { opacity: "0", transform: "translateY(24px)" },
           "100%": { opacity: "1", transform: "translateY(0)" }
         },
         float: {
           "0%, 100%": { transform: "translateY(0) rotate(0deg)" },
-          "50%": { transform: "translateY(-20px) rotate(3deg)" }
-        },
-        inkSpread: {
-          "0%": { transform: "scale(0.8)", opacity: "0", filter: "blur(10px)" },
-          "100%": { transform: "scale(1)", opacity: "1", filter: "blur(0)" }
-        },
-        shimmer: {
-          "0%, 100%": { opacity: "0.3" },
-          "50%": { opacity: "0.7" }
+          "50%": { transform: "translateY(-14px) rotate(2deg)" }
         }
       }
     }

@@ -2,7 +2,6 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { OliveBranch } from "./illustrations/BotanicalAccents";
 
 export function Invitation() {
   const ref = useRef<HTMLDivElement>(null);
@@ -11,44 +10,55 @@ export function Invitation() {
   return (
     <section
       ref={ref}
-      className="relative py-32 md:py-48 px-6 bg-cream-50 paper-texture overflow-hidden"
+      className="relative py-28 md:py-36 px-6 bg-paper-50 border-t border-ink-600/10"
     >
-      <OliveBranch className="absolute top-10 left-0 w-80 opacity-30" />
-      <OliveBranch className="absolute bottom-10 right-0 w-80 opacity-30 rotate-180" />
+      <div className="max-w-xl mx-auto text-center space-y-8">
 
-      <div className="max-w-3xl mx-auto text-center space-y-10 relative z-10">
+        {/* Bow decoration (sprite from ducks.png) */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={inView ? { opacity: 1, scale: 1 } : {}}
+          transition={{ duration: 1, delay: 0.1 }}
+          className="flex justify-center"
+        >
+          <img
+            src="/images/icons/bow.png"
+            alt=""
+            className="w-full h-auto"
+            style={{ maxWidth: "280px" }}
+          />
+        </motion.div>
+
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 1, delay: 0.2 }}
-          className="font-smallcaps tracking-[0.4em] text-xs text-olive-700"
+          initial={{ opacity: 0 }}
+          animate={inView ? { opacity: 1 } : {}}
+          transition={{ duration: 1, delay: 0.3 }}
+          className="font-typewriter tracking-[0.28em] text-[13px] md:text-[15px] text-ink-600 uppercase"
         >
           com muito amor · convidamos você
         </motion.p>
 
+        <motion.h2
+          initial={{ opacity: 0, filter: "blur(6px)" }}
+          animate={inView ? { opacity: 1, filter: "blur(0)" } : {}}
+          transition={{ duration: 1.4, delay: 0.5 }}
+          className="font-script text-6xl md:text-8xl text-ink-600 leading-tight"
+        >
+          Uma década<br />de amor
+        </motion.h2>
+
         <motion.div
           initial={{ scaleX: 0 }}
           animate={inView ? { scaleX: 1 } : {}}
-          transition={{ duration: 1.2, delay: 0.4 }}
-          className="w-24 h-px bg-olive-600/40 mx-auto"
+          transition={{ duration: 1, delay: 0.7 }}
+          className="w-16 h-px bg-ink-600/40 mx-auto"
         />
 
-        <motion.h2
-          initial={{ opacity: 0, filter: "blur(8px)" }}
-          animate={inView ? { opacity: 1, filter: "blur(0px)" } : {}}
-          transition={{ duration: 1.5, delay: 0.5 }}
-          className="font-script text-5xl md:text-7xl text-olive-700 leading-relaxed"
-        >
-          Uma década
-          <br />
-          de amor
-        </motion.h2>
-
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1, delay: 0.9 }}
-          className="font-body text-lg md:text-xl text-olive-800 leading-loose italic max-w-2xl mx-auto"
+          className="font-serif italic text-xl md:text-2xl text-ink-800 leading-loose"
         >
           Foram dez anos de aventuras, sonhos divididos e memórias que
           guardamos no coração. Queremos celebrar essa data tão especial
@@ -59,21 +69,20 @@ export function Invitation() {
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ duration: 1.2, delay: 1.2 }}
-          className="font-serif italic text-xl md:text-2xl text-olive-700 pt-6"
+          className="font-serif italic text-2xl text-ink-700 pt-2"
         >
           "Que sorte a nossa é poder viver a vida ao lado de vocês."
         </motion.p>
 
-        <motion.div
+        <motion.p
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ duration: 1.2, delay: 1.5 }}
-          className="pt-8"
+          className="font-script text-5xl md:text-6xl text-ink-600 pt-2"
         >
-          <p className="font-script text-4xl md:text-5xl text-olive-700">
-            Fernanda <span className="font-serif italic text-2xl md:text-3xl">&</span> Raphael
-          </p>
-        </motion.div>
+          Fernanda <span className="font-display font-semibold not-italic text-2xl align-middle">&</span> Raphael
+        </motion.p>
+
       </div>
     </section>
   );

@@ -1,0 +1,10 @@
+elements_01.png	x=904	y=0	w=261	h=377	area=42131
+elements_02.png	x=450	y=249	w=347	h=624	area=61601
+elements_03.png	x=443	y=334	w=61	h=75	area=1543
+elements_04.png	x=885	y=337	w=51	h=62	area=1141
+elements_05.png	x=467	y=389	w=48	h=60	area=1099
+elements_06.png	x=26	y=465	w=117	h=141	area=7066
+elements_07.png	x=951	y=538	w=166	h=379	area=18171
+elements_08.png	x=827	y=579	w=108	h=294	area=15098
+elements_09.png	x=734	y=865	w=76	h=53	area=2593
+elements_10.png	x=313	y=896	w=77	h=82	area=2716
