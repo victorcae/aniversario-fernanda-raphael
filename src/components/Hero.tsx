@@ -83,7 +83,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.85 }}
-          className="absolute select-none"
+          className="hidden md:absolute select-none"
           style={{ left: "14%", top: "39%", width: "12%" }}
         />
         <motion.img
@@ -92,7 +92,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.95 }}
-          className="absolute select-none"
+          className="hidden md:absolute select-none"
           style={{ left: "24%", top: "44%", width: "12%" }}
         />
 
@@ -114,7 +114,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.9 }}
-          className="absolute select-none"
+          className="hidden md:absolute select-none"
           style={{ left: "65%", top: "44%", width: "10%" }}
         />
         {/* Right: candle with bow */}
@@ -124,7 +124,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1.0 }}
-          className="absolute select-none"
+          className="hidden md:absolute select-none"
           style={{ left: "77%", top: "39%", width: "10%" }}
         />
 
@@ -135,7 +135,7 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.1 }}
-          className="absolute select-none"
+          className="hidden md:absolute select-none"
           style={{ left: "38%", top: "58%", width: "4.5%" }}
         />
         <motion.img
@@ -144,7 +144,7 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.15 }}
-          className="absolute select-none"
+          className="hidden md:absolute select-none"
           style={{ left: "55%", top: "58%", width: "4.5%" }}
         />
 
@@ -153,7 +153,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 1.2 }}
-          className="absolute text-center left-0 right-0 top-[56%] md:top-[65%]"
+          className="absolute text-center left-0 right-0 top-[52%] md:top-[65%]"
         >
           <h2
             className="font-script text-ink-600 leading-none"
@@ -168,7 +168,7 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.2, delay: 1.4 }}
-          className="absolute text-center left-0 right-0 top-[68%] md:top-[74%] font-typewriter tracking-[0.14em] text-ink-700 uppercase leading-relaxed px-[14%]"
+          className="absolute text-center left-0 right-0 top-[64%] md:top-[74%] font-typewriter tracking-[0.14em] text-ink-700 uppercase leading-relaxed px-[14%]"
           style={{ fontSize: "clamp(10px, 2vw, 17px)" }}
         >
           convidam você para a celebração
@@ -181,7 +181,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 6 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 1.6 }}
-          className="absolute text-center left-0 right-0 top-[77%] md:top-[80%] font-display font-bold text-ink-700 tracking-[0.14em]"
+          className="absolute text-center left-0 right-0 top-[73%] md:top-[80%] font-display font-bold text-ink-700 tracking-[0.14em]"
           style={{ fontSize: "clamp(1.1rem, 3.5vw, 2.1rem)" }}
         >
           29 . 08 . 2026
@@ -192,7 +192,7 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.2, delay: 1.8 }}
-          className="absolute text-center left-0 right-0 top-[84%] md:top-[86%] font-script text-ink-600"
+          className="absolute text-center left-0 right-0 top-[81%] md:top-[86%] font-script text-ink-600"
           style={{ fontSize: "clamp(1rem, 2.8vw, 1.8rem)" }}
         >
           formal invitation to follow
